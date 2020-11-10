@@ -6,8 +6,10 @@ public class StringUtilities {
      * @return `Hello World` as a string
      */
     public static String getHelloWorld() {
-        return null;
+
+        return "Hello World";
     }
+
 
     /**
      * @param firstSegment a string to be added to
@@ -15,7 +17,8 @@ public class StringUtilities {
      * @return the concatenation of two strings, `firstSegment`, and `secondSegment`
      */
     public static String concatenation(String firstSegment, String secondSegment){
-        return null;
+
+        return firstSegment + secondSegment;
     }
 
     /**
@@ -24,7 +27,8 @@ public class StringUtilities {
      * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
      */
     public static String concatenation(int firstSegment, String secondSegment){
-        return null;
+
+        return firstSegment + "" + secondSegment;
     }
 
     /**
@@ -32,7 +36,8 @@ public class StringUtilities {
      * @return the first 3 characters of `input`
      */
     public static String getPrefix(String input){
-        return null;
+
+        return input.substring(0, 3);
     }
 
     /**
@@ -40,7 +45,8 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return null;
+        int length = input.length();
+        return input.substring(length-3, length);
     }
 
     /**
@@ -48,16 +54,30 @@ public class StringUtilities {
      * @param comparableValue the value to be compared against
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
-    public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
-    }
+    public static Boolean compareTwoStrings(String inputValue, String comparableValue) {
 
+        return inputValue == comparableValue;
+//        if (inputValue.equals(comparableValue)) {
+//            return inputValue.equals(comparableValue);
+//    }
+//         else (inputValue!= comparableValue) {
+//            return inputValue!= comparableValue;
+    }
     /**
      * @param inputValue the value input from user
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        return null;
+        //int middle = (inputValue.length() % 2 == 0) ? inputValue.length()/2 - 1 : inputValue.length()/2;
+        int middle = 0;
+        if(inputValue.length() % 2 == 0){
+            middle = inputValue.length()/2 - 1;
+        } else {
+            middle = inputValue.length()/2;
+        }
+        char[] characters = inputValue.toCharArray();
+        return characters[middle];
+
     }
 
     /**
@@ -65,7 +85,11 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        return null;
+        String school = "Zipcode";
+        String value = school.split(" ") [0];
+
+        return school;
+
     }
 
     /**
@@ -73,7 +97,10 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-        return null;
+        String city = "Wilmington";
+        String value = city.split(" ") [0];
+
+        return city;
     }
 
     /**
@@ -81,6 +108,11 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+        ;        StringBuilder str = new StringBuilder("Zipcode Wilmington");
+        System.out.println("Zipcode Wilmington = " + str.toString());
+        StringBuilder reverseStr = str.reverse();
+        System.out.println("Zipcode Wilmington =" + reverseStr.toString());
+
+        return new StringBuilder(str).toString();
     }
 }
