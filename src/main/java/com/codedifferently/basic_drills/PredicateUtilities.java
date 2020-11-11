@@ -38,7 +38,7 @@ public class PredicateUtilities {
      */
     public Boolean isLessThanOrEqualTo(int x, int y) {
 
-        return x >= y;
+        return x <= y;
     }
 
 
